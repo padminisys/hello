@@ -59,7 +59,24 @@ issues: "https://github.com/padminisys/hello/issues"
 # artifact. A pattern is matched from the relative path of the file or directory of the collection directory. This
 # uses 'fnmatch' to match the files or directories. Some directories and files like 'galaxy.yml', '*.pyc', '*.retry',
 # and '.git' are always filtered. Mutually exclusive with 'manifest'
-build_ignore: []
+# galaxy.yml (add to the bottom or merge with existing)
+build_ignore:
+  - .git
+  - .github
+  - .venv
+  - .ansible
+  - venv
+  - __pycache__
+  - .mypy_cache
+  - .pytest_cache
+  - "*.tar.gz"
+  - "*.zip"
+  - ".vscode"
+  - ".idea"
+  - docs/
+  - molecule/
+  - tests/
+
 
 # A dict controlling use of manifest directives used in building the collection artifact. The key 'directives' is a
 # list of MANIFEST.in style
