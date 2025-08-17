@@ -1,0 +1,4 @@
+# .ansible-lint
+skip_list:
+  - yaml[line-length]     # Skip line length warnings in YAML files
+  - fqcn-builtins         # Allow using built-in modules without FQCN (Fully Qualified Collection Name)

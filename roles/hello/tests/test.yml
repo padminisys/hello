@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: MIT-0
+---
+- name: Test hello role
+  hosts: localhost
+  gather_facts: false
+  roles:
+    - role: hello
+      vars:
+        hello_user: "lint"
